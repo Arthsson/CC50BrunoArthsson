@@ -1,10 +1,10 @@
-﻿#include <stdio.h>
+﻿#include <stdio.h> 
 
-int main() {
+void main() {
     int height; 
 	
 	do{
-		printf("Teste: ");
+		printf("Height: ");
 		scanf("%d", &height);
 	}
 	while(height<=0 || height>8);
@@ -18,6 +18,5 @@ int main() {
         }
         printf("\n");
     }
-    return 0;
 }
 
