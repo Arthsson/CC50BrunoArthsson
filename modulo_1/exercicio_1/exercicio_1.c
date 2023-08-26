@@ -1,10 +1,10 @@
-﻿#include <stdio.h>
+﻿#include <stdio.h> //standart inpunt output .h->header file
 
-int main() {
+void main() {
     int height; 
 	
 	do{
-		printf("Tamanho: ");
+		printf("height: ");
 		scanf("%d", &height);
 	}
 	while(height<=0 || height>8);
@@ -18,5 +18,4 @@ int main() {
         }
         printf("\n");
     }
-    return 0;
 }
