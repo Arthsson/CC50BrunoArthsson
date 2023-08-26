@@ -38,6 +38,6 @@ Se você encontrar erros, ou tiver sugestões para melhorias, fique à vontade p
 
 ## Aviso Legal
 
-Este repositório contém materiais do curso CC50: Introdução à Ciência da Computação da Harvard disponibilizado pela ![Fundação Estudar na Prática](https://ead.napratica.org.br/enrollments)
+Este repositório contém materiais do curso CC50: Introdução à Ciência da Computação da Harvard disponibilizado pela [Fundação Estudar na Prática](https://ead.napratica.org.br/enrollments)
 
 *Última atualização: Agosto de 2023*
