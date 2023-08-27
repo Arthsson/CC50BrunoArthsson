@@ -10,15 +10,15 @@
 		coins ++;
 		}
 	}
- int main(void) {
+ void main(void) {
 	do{
 		printf("Troco devido: ");
 		if(scanf("%f",&value)!=1){
-			while (getchar() != '\n');
+			while (getchar() != '\n'); //flushes the input buffer '-'
 			}
 	}while(value<=0);
 	
-	verifyCents(0.50f);
+	verifyCents(0.50f); //0.50 It tells the computer that this a floating point number, could be intepreted as an Integer or a Double
 	verifyCents(0.25f);
 	verifyCents(0.10f);
 	verifyCents(0.05f);
@@ -30,5 +30,4 @@
 		}
 	printf("%d\n",coins);
 
-   return 0;
  }
