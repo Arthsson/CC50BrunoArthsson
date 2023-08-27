@@ -1,9 +1,9 @@
 ﻿#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h> // Para a função isdigit()
+#include <stdlib.h> // alocação de memória, controle de processos, conversão ...
+#include <string.h> // manipular string '-'
+#include <ctype.h> // manipular caracteres '-'
 
-int main(void) {
+void main(void) {
     char input[100];
     long numberCard;
     int length = 0;
@@ -12,12 +12,12 @@ int main(void) {
     char cardType[20];
 
     printf("Digite o numero do cartao: ");
-    while (fgets(input, sizeof(input), stdin) != NULL) {
+    while (fgets(input, sizeof(input), stdin) != NULL) { //ler a entrada stdin ate o tamanho sizeof() do input [100]
         int isValidInput = 1;
         length = strlen(input) - 1;
 
         for (int i = 0; i < length; i++) {
-            if (!isdigit(input[i])) {
+            if (!isdigit(input[i])) { //verificar se não contem letras ou caracteres especiais
                 isValidInput = 0;
                 break;
             }
@@ -30,7 +30,7 @@ int main(void) {
         }
     }
 
-    numberCard = strtol(input, NULL, 10);
+    numberCard = strtol(input, NULL, 10); // convertendo em long (variavel em string, referencia do char(ponteiro), base numérica) 
 
     for (int i = length - 2; i >= 0; i -= 2) {
         int digit = (input[i] - '0') * 2;
@@ -50,7 +50,7 @@ int main(void) {
 
     if (soma % 10 == 0) {
         if ((length == 15 && (input[0] == '3' && (input[1] == '4' || input[1] == '7')))) {
-            strcpy(cardType, "/AMERICAN");
+            strcpy(cardType, "/AMERICAN"); //copiar conteudo de uma string para outra ( cardtype = "/AMERICAN" )
         } else if ((length == 16 && input[0] == '5' && (input[1] >= '1' && input[1] <= '5'))) {
             strcpy(cardType, "/MASTER");
         } else if ((length == 13 || length == 16) && input[0] == '4') {
@@ -65,6 +65,4 @@ int main(void) {
     }
 
     printf("Status: %s\n", cardType);
-
-    return 0;
 }
