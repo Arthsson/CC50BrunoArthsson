@@ -32,11 +32,6 @@ int main(int argc, char *argv[]) { // recebe a key antes da execução do progra
         if (isalpha(plaintext[i])) {
             char base = isupper(plaintext[i]) ? 'A' : 'a';
             printf("%c \n", (plaintext[i] - base + k) % 26 + base);
-			printf("%c \n",(plaintext[i] - base + k));
-			printf("%c \n",(plaintext[i] - base + k)%26);
-			printf("%c \n",plaintext[i]);
-			printf("%d \n", k);
-			printf("%c \n", base);
         } else {
             printf("%c", plaintext[i]);
         }
